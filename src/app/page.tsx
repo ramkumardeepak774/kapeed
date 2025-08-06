@@ -1,103 +1,130 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Github, Linkedin, Mail, Phone } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            Hi, I'm{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Deepak Kumar
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            AI-focused Software Engineer with 3 years of experience in backend systems and applied Machine Learning. 
+            Specializing in Java, Python, LLM fine-tuning, RAG, and building scalable AI solutions.
+          </p>
+          <div className="flex justify-center space-x-4 mb-8">
+            <Link
+              href="mailto:ramkumardeepak774@gmail.com"
+              className="flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <Mail className="w-5 h-5" />
+              <span>Get in Touch</span>
+            </Link>
+            <Link
+              href="/projects"
+              className="flex items-center space-x-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <span>View Projects</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+          <div className="flex justify-center space-x-6 text-gray-600">
+            <a href="tel:+91-6204815090" className="flex items-center space-x-2 hover:text-blue-600">
+              <Phone className="w-5 h-5" />
+              <span>+91-6204815090</span>
+            </a>
+            <a href="mailto:ramkumardeepak774@gmail.com" className="flex items-center space-x-2 hover:text-blue-600">
+              <Mail className="w-5 h-5" />
+              <span>ramkumardeepak774@gmail.com</span>
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Key Achievements */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-2">Performance</h3>
+            <p className="text-blue-100">
+              Reduced ML training time by 75%, improved system performance by 40%, 
+              and achieved 20x API throughput
+            </p>
+          </div>
+          <div className="bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-2">Scale</h3>
+            <p className="text-green-100">
+              Managed 700+ production ML models with 99.9% uptime across distributed systems
+            </p>
+          </div>
+          <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-2">Recognition</h3>
+            <p className="text-purple-100">
+              Global Rank 306 in CodeChef May Challenge 2021 among 6,401 participants
+            </p>
+          </div>
+        </div>
+
+        {/* Current Role */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
+          <h2 className="text-3xl font-bold mb-6 text-center">Current Role</h2>
+          <div className="text-center">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Software Engineer at Krista AI
+            </h3>
+            <p className="text-gray-600 mb-4">November 2024 - Present</p>
+            <p className="text-gray-700 max-w-2xl mx-auto">
+              Leading AI/ML initiatives including PRF-based query expansion, model versioning systems, 
+              and high-performance caching strategies. Specializing in LLM fine-tuning, RAG systems, 
+              and scalable ML infrastructure.
+            </p>
+          </div>
+        </div>
+
+        {/* Skills Overview */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <h3 className="text-2xl font-bold mb-6">Technical Skills</h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-2">Languages</h4>
+                <p className="text-gray-600">Python, Java, C/C++, SQL, JavaScript, R, MATLAB</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-2">AI/ML</h4>
+                <p className="text-gray-600">scikit-learn, FastText, Transformers, OpenAI API, LangChain, LLMs, GPT-4, BLOOM</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-2">Frameworks</h4>
+                <p className="text-gray-600">Spring Boot, Flask, Hibernate, JUnit, LangChain</p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <h3 className="text-2xl font-bold mb-6">Infrastructure</h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-2">DevOps</h4>
+                <p className="text-gray-600">Docker, Kubernetes, AWS, Celery, Jenkins, Git</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-2">Databases</h4>
+                <p className="text-gray-600">PostgreSQL, MongoDB, Redis, ChromaDB</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-2">Education</h4>
+                <p className="text-gray-600">BSc Mathematics & Scientific Computing, IIT Kanpur (2018-2022)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
