@@ -230,14 +230,6 @@ The application includes built-in analytics tracking. To enhance analytics:
 - **Rate Limiting** - API route protection
 - **Input Validation** - Form validation and sanitization
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
